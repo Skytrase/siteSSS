@@ -17,11 +17,16 @@ body {
    
 }
 #button {
-    border: 1px solid black;
-    margin: 0 auto;
-    width: 100px;
+    transition: 0.2s;
+    border: 1px solid whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
     background-color:#179779;
-    border-radius: 8px;
+    border-radius: 18px;
+    box-shadow: 0 4px 0 0 whitesmoke;
+    color: whitesmoke;
+    margin-top: 10px;
 }
 
 #button p{
@@ -31,13 +36,24 @@ body {
 }
 
 .rt {
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 8px;
+    transition: 0.2s;
+    color: whitesmoke;
+    width: 150px;
+    border: 1px solid whitesmoke;
+    border-radius: 18px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     padding: 10px;
     background-color: #179779;
     text-align: center;
+    box-shadow: 0 4px 0 0 whitesmoke;
+    
+}
+
+#button:hover {
+    box-shadow: 0 2px 0 0 whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
 }
