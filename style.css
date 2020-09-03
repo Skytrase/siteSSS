@@ -10,11 +10,14 @@ body {
     font-weight: 700;
 }
 #box {
+    transition: 0.4s;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background-color: red;
-    padding: 200px 0 0 0;
-   
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #button {
     transition: 0.2s;
@@ -23,8 +26,8 @@ body {
     margin-right: auto;
     width: 150px;
     background-color:#179779;
-    border-radius: 18px;
-    border-bottom: 4px solid whitesmoke;
+    border-radius: 28px;
+    border-bottom: 5px solid whitesmoke;
     color: whitesmoke;
     margin-top: 10px;
 }
@@ -40,15 +43,15 @@ body {
     color: whitesmoke;
     width: 150px;
     border: 1px solid whitesmoke;
-    border-radius: 18px;
+    border-radius: 28px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 10px;
     background-color: #179779;
     text-align: center;
     
-    border-bottom: 4px solid whitesmoke;
+    border-bottom: 5px solid whitesmoke;
     
 }
 
@@ -58,4 +61,55 @@ body {
     margin-right: auto;
     margin-top: 12px;
     border-bottom: 2px solid whitesmoke;
+}
+
+#cirOne {
+    transition: 1s;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid whitesmoke;
+}
+
+#cirTwo {
+    transition: 1.5s;
+    width: 110px;
+    height: 110px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid whitesmoke;
+}
+
+#cirThre {
+    transition: 2s;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+}
+
+#container {
+    transition: 0.4s;
+    width: 300px;
+    height: 350px;
+    border: 2px solid whitesmoke;
+    border-radius: 25%;
+    padding: 30px 0 0 0 ;
+}
+
+#lennn {
+    border-top: 2px solid whitesmoke;
+    width: 100%;
+    height: 400px;
+    background-color: red;
 }
