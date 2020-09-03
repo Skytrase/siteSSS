@@ -113,3 +113,16 @@ body {
     height: 400px;
     background-color: red;
 }
+
+#cirThre:hover {
+    width: 70px;
+    height: 70px;
+}
+#cirTwo:hover {
+    width: 80px;
+    height: 80px;
+}
+#cirOne:hover {
+    width: 175px;
+    height: 175px;
+}

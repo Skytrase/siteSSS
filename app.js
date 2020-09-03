@@ -16,17 +16,6 @@ function randomInteger(min, max) {
     return Math.round(rand);
   }
 
-/*
-function colcol() {
-    let hesh = randomInteger(111111, 999999)
-    button.addEventListener('click', () => {
-        box.style.backgroundColor = `#${hesh}`
-    })
-}
-
-colcol()
-
-*/
 console.dir(cirOne)
 
 button.onclick = () => {
@@ -44,7 +33,7 @@ button.onclick = () => {
     cirTwo.style.backgroundColor = `#${hesh2}`
     cirThre.style.backgroundColor = `#${hesh3}`
 
-    cirOne.clientHeight = radiuss
+    
     cirOne.clientWidth = radiuss
 
     container.style.backgroundColor = `#${hesh4}`
