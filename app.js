@@ -10,19 +10,22 @@ const cirThre = document.getElementById('cirThre')
 
 const container = document.getElementById('container')
 
+const inp = document.getElementsByClassName('inpt')
+const inpt = inp[0]
+const valueslength = document.getElementById('valueslength')
+
 
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max - min);
     return Math.round(rand);
   }
 
-console.dir(cirOne)
+  console.log(inpt)
 
 button.onclick = () => {
     let hesh = randomInteger(111111, 999999)
     let hesh1 = randomInteger(111111, 999999)
     let hesh2 = randomInteger(111111, 999999)
-    let hesh3 = randomInteger(111111, 999999)
     let hesh4 = randomInteger(111111, 999999)
 
     let radiuss = randomInteger(120, 160)
@@ -31,20 +34,26 @@ button.onclick = () => {
 
     cirOne.style.backgroundColor = `#${hesh1}`
     cirTwo.style.backgroundColor = `#${hesh2}`
-    cirThre.style.backgroundColor = `#${hesh3}`
+    cirThre.style.backgroundColor = `#${hesh4}`
 
     
-    cirOne.clientWidth = radiuss
 
     container.style.backgroundColor = `#${hesh4}`
 
     box.style.backgroundColor = `#${hesh}`
     colloo.innerText = `#${hesh}`
-
-
-    console.log(radiuss)
-    console.log(typeof radiuss)
-    console.log(typeof cirOne.clientHeight)
 }
 
+inpt.oninput = () => {
+  let rand8 = randomInteger(1, 8)
+st = inpt.value
+stlen = st.length
+valueslength.innerText = `${stlen}`
 
+
+let arand = ['','#3700fd','#6500a8','#690052','#9b0000','#005031','#314404','#c42700','#309700'] 
+inpt.style.backgroundColor = arand[rand8]
+valueslength.style.backgroundColor = arand[rand8]
+
+console.dir(inpt)
+}
