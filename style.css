@@ -196,3 +196,132 @@ body {
     box-shadow: 0 0 12px 5px #0058fc;
     text-align: center;
 }
+/*-------------------------------------*/
+#contFor{
+    background-color: red;
+    width: 100%;
+    height: 230px;
+    border-top: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contFive{
+    
+    border-radius: 10px;
+    width: 80%;
+    height: 200px;
+
+   
+    
+}
+#contCont{
+    background-color: red;
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contChild{
+    
+    font-weight: 700;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 72px;
+    height: 72px;
+    color:#85e3ff;
+    background-color: #00143a;
+    margin-left: auto;
+    margin-right: auto;  
+    padding: 18px 0 0 0;
+    border: 1px solid #0058fc;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1px #0058fc;
+    text-align: center;
+}
+#contButtons{
+    background-color: red;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        
+}
+#butOneO{
+    text-align: center;
+    color: chartreuse;
+    padding: 7px;
+    font-size: 28px;
+    font-weight: 700;
+    background-color: #00143a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid whitesmoke;
+    border-bottom: 4px solid whitesmoke;
+    cursor: pointer;
+
+}
+#butOneO:hover{
+    margin-top: 1px;
+    border-bottom: 3px solid whitesmoke;
+}
+#butTwoO{
+    text-align: center;
+    color: chartreuse;
+    padding: 9px;
+    font-size: 28px;
+    font-weight: 700;
+    background-color:#00143a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid whitesmoke;
+    border-bottom: 4px solid whitesmoke;
+    cursor: pointer;
+}
+#butTwoO:hover{
+    margin-top: 1px;
+    border-bottom: 3px solid whitesmoke;
+}    
+#butTreO{
+    text-align: center;
+    color: chartreuse;
+    padding: 9px;
+    font-size: 28px;
+    font-weight: 700;
+    background-color:#00143a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid whitesmoke;
+    border-bottom: 4px solid whitesmoke;
+    cursor: pointer;
+}
+#butTreO:hover{
+    margin-top: 1px;
+    border-bottom: 3px solid whitesmoke;
+}  
+#butOne{ 
+    width: 80px;
+    height: 80px;
+    padding: 10px 0 0 0;
+}
+#butTwo{ 
+    width: 80px;
+    height: 80px;
+    padding: 10px 0 0 0;
+}
+#butTre{  
+    width: 80px;
+    height: 80px;
+    padding: 10px 0 0 0;
+}

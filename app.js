@@ -43,7 +43,7 @@ button.onclick = () => {
     box.style.backgroundColor = `#${hesh}`
     colloo.innerText = `#${hesh}`
 }
-
+/*------------------- */
 inpt.oninput = () => {
   let rand8 = randomInteger(1, 8)
 st = inpt.value
@@ -56,4 +56,23 @@ inpt.style.backgroundColor = arand[rand8]
 valueslength.style.backgroundColor = arand[rand8]
 
 console.dir(inpt)
+}
+/*-------------- */
+const butOneO = document.getElementById('butOneO')
+const butTwoO = document.getElementById('butTwoO')
+const butTreO = document.getElementById('butTreO')
+const contChild = document.getElementById('contChild')
+let x = 0
+
+butOneO.onclick = () => {
+x-=1
+contChild.innerText = `${x}`
+}
+butTwoO.onclick = () => {
+  x = 0
+  contChild.innerText = `${x}`
+}
+butTreO.onclick = () => {
+  x+=1
+contChild.innerText = `${x}`
 }
