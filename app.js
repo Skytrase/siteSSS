@@ -89,6 +89,6 @@ function docscroll() {
     let windowScroll = document.body.scrollTop || document.documentElement.scrollTop
     let documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
     let scrolled = (windowScroll - documentHeight)*100
-    document.getElementById('scrollline').style.width = scrolled + '%'
+    document.getElementById('scrollline').style.width = `${scrolled}%`
 
 }
