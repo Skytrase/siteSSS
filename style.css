@@ -15,6 +15,7 @@ body {
 ul# loader{
 list-style-type: none;
 display: flex;
+background-color: white;
 }
 ul #loader li{
 margin: 0.2rem;
