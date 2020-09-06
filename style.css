@@ -8,10 +8,11 @@ body {
     height: 100%;
     font-size: larger;
     font-weight: 700;
+    position: relative;
 }
 #scrollbox {
     width: 100%;
-    height: 8px;
+    height: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,7 +21,7 @@ body {
 }
 #scrollline{
     width: 0%;
-    height: 8px;
+    height: 10px;
     position: fixed;
     top: 0;
     left: 0;
