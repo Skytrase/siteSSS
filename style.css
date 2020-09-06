@@ -28,8 +28,18 @@ body {
     left: 0;
     z-index: 3;
     background: linear-gradient(to left,#008aff,#00ffe7);
-
+    animation: animate 5s linear infinite;
 }
+
+@keyframes animate {
+    0%,100%{
+filter: hue-rotate(0deg);
+}
+    50%{
+filter: hue-rotate(360deg);
+}
+}
+
 #box {
     transition: 0.2s;
     width: 100%;
