@@ -9,7 +9,7 @@ body {
     font-size: larger;
     font-weight: 700;
     position: relative;
-    background-color: red;
+    background-color: #000000;
 }
 #scrollbox {
     width: 100%;
