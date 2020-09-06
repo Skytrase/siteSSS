@@ -79,16 +79,11 @@ contChild.innerText = `${x}`
 
 /*-------------- */
 
-function docscroll() {
-    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop
-    let documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    let scrolled = (windowScroll - documentHeight)*100
-    document.getElementById('scrollline').style.width = scrolled + '%'
-}
-    window.onscroll = () => {
-    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop
-    let documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    let scrolled = (windowScroll - documentHeight)*100
-    document.getElementById('scrollline').style.width = `${scrolled}%`
+let progress = document.getElementById('scrollline');
+let totalHeight = document.body.scrollHeight - window.innerHeight;
 
+
+    window.onscroll = () => {
+let progressHeight = (window.pageYOffset / totalHeight)*100;
+progress.style.width = progressHeight + '%';
 }
