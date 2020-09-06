@@ -85,6 +85,4 @@ function docscroll() {
     let scrolled = (windowScroll - documentHeight)*100
     document.getElementById('scrollline').style.width = scrolled + '%'
 }
-    window.onscroll = function() {
-    docscroll()
-}
+    window.onscroll = docscroll()
