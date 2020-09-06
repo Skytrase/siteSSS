@@ -20,7 +20,7 @@ body {
     z-index: 2;
 }
 #scrollline{
-    width: 100%;
+    width: 20%;
     height: 10px;
     position: fixed;
     top: 0;
