@@ -20,21 +20,31 @@ height: 100vh;
 section {
 height: 100vh;
 background-color: rgba(0,0,0,.8)
+position: relative;
 }
 
 span{
 position: absolute;
 pointer-events: none;
 animation: anim 5s linear infinite;
+z-index: 6;
+background: red;
 }
 @keyframes anim{
-0%{transform: scale(0) translateY(0) rotate(0deg);
-opacity: 0;}
-10%{opacity: 1;}
-90%{opacity: 1;}
-100%{transform: scale(1) translateY(-500%) rotate(360deg);
-opacity: 0;}
-
+0%{
+transform: scale(0) translateY(0) rotate(0deg);
+opacity: 0;
+}
+10%{
+opacity: 1;
+}
+90%{
+opacity: 1;
+}
+100%{
+transform: scale(1) translateY(-500%) rotate(360deg);
+opacity: 0;
+}
 }
 
 #loader{
