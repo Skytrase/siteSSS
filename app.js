@@ -107,6 +107,6 @@ section.appendChild(square);
 
 setTimeout(()=>{
 square.remove()
-}, 500);
+}, 5000);
 }
 setInterval(createSquare, 150);
