@@ -14,19 +14,20 @@ body {
 
 #oneoc{
 overflow: hidden;
-height: 100vh;
+height: 80vh;
 width: 100%;
 }
 
 section {
 width: 100%;
-height: 100vh;
+height: 80vh;
 background-color: rgba(0,0,0,.8)
 position: relative;
 overflow: hidden;
 }
 #buttonty{
 margin: auto;
+margin-top: 45%;
 width: 50%;
 height: 10%;
 border-radius: 5px;
