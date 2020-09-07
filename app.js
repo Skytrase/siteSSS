@@ -90,7 +90,7 @@ progress.style.width = progressHeight + '%';
 /*-------------- */
 
 const colorss = ['#7B68EE','#7FFFD4','#FFA07A','#FF1493','#FFFF00','#FF0000'];
-
+const buttonty = document.getElementById('buttonty');
 function createSquare(){
 const section = document.querySelector('section');
 const square = document.createElement('span');
@@ -108,7 +108,7 @@ section.appendChild(square);
 
 setTimeout(()=>{
 square.remove()
-}, 5000);
+}, 7000);
 }
-section.onclick = createSquare();
+buttonty.onclick = ()=>{createSquare()};
 /*setInterval(createSquare, 400);*/
