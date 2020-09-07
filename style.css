@@ -27,7 +27,6 @@ span{
 position: absolute;
 pointer-events: none;
 animation: anim 5s linear infinite;
-z-index: 6;
 background: red;
 }
 @keyframes anim{
