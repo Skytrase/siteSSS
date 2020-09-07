@@ -95,9 +95,10 @@ function createSquare(){
 const section = document.querySelector('section');
 const square = document.createElement('span');
 let size = Math.random()*50;
-square.style.width = Math.random()*innerWidth+'px';
-square.style.height = Math.random()*innerWidth+'px';
-square.style.top = 100+(4*size)+'px';
+let randnom = Math.random();
+square.style.width =  randnom*innerWidth+'px';
+square.style.height = randnom*innerWidth+'px';
+square.style.top = 100+(6*size)+'px';
 square.style.left = 50+size+'px';
 
 const bg = colorss[Math.floor(Math.random()*colorss.length)];
@@ -107,6 +108,6 @@ section.appendChild(square);
 
 setTimeout(()=>{
 square.remove()
-}, 5000);
+}, 3000);
 }
-setInterval(createSquare, 250);
+setInterval(createSquare, 400);
