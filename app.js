@@ -110,5 +110,5 @@ setTimeout(()=>{
 square.remove()
 }, 5000);
 }
-section.onclick = createSquare;
+section.onclick = createSquare();
 /*setInterval(createSquare, 400);*/
