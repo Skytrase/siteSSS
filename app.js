@@ -87,3 +87,26 @@ let totalHeight = document.body.scrollHeight - window.innerHeight;
 let progressHeight = (window.pageYOffset / totalHeight)*100;
 progress.style.width = progressHeight + '%';
 }
+/*-------------- */
+
+const colorss = ['#7B68EE','#7FFFD4','#FFA07A','#FF1493','#FFFF00','#FF0000'];
+
+function createSquare(){
+const section = document.querySelector('section');
+const square = document.createElement('span');
+let size = Math.random()*50;
+square.style.width = Math.random()*innerWidth+'px';
+square.style.height = Math.random()*innerHeight+'px';
+square.style.top = 20+size+'px';
+square.style.left = 20+size+'px';
+
+const bg = colors[Math.floor(Math.random()*colorss.length)];
+square.style.background = bg;
+
+section.appendChild(square);
+
+setTimeout(()=>{
+square.remove()
+}, 500);
+}
+setInterval(createSquare, 150);
