@@ -96,7 +96,7 @@ const section = document.querySelector('section');
 const square = document.createElement('span');
 let size = Math.random()*50;
 square.style.width = Math.random()*innerWidth+'px';
-square.style.height = Math.random()*innerHeight+'px';
+square.style.height = Math.random()*innerWidth+'px';
 square.style.top = 20+size+'px';
 square.style.left = 20+size+'px';
 
