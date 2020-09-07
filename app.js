@@ -97,7 +97,7 @@ const square = document.createElement('span');
 let size = Math.random()*50;
 square.style.width = Math.random()*innerWidth+'px';
 square.style.height = Math.random()*innerWidth+'px';
-square.style.top = 100+size+'px';
+square.style.top = 100+(4*size)+'px';
 square.style.left = 50+size+'px';
 
 const bg = colorss[Math.floor(Math.random()*colorss.length)];
@@ -109,4 +109,4 @@ setTimeout(()=>{
 square.remove()
 }, 5000);
 }
-setInterval(createSquare, 150);
+setInterval(createSquare, 250);
