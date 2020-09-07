@@ -25,7 +25,16 @@ background-color: rgba(0,0,0,.8)
 position: relative;
 overflow: hidden;
 }
-
+#buttonty{
+margin: auto;
+width: 50%;
+height: 10%;
+border-radius: 5px;
+border: 2 px solid black;
+position: relative;
+z-index: 11;
+background-color: #144784;
+}
 span{
 position: absolute;
 pointer-events: none;
