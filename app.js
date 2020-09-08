@@ -129,3 +129,217 @@ cahgesizebox.onclick = ()=>{
   cahgesizebox.style.width = (((Math.random()*innerWidth)/10)*8)+'px';
 cahgesizebox.style.height = (((Math.random()*innerHeight)/2)+10)+'px';
 }
+/*-----------------------------------------------*/
+const strokaSum = document.getElementById('rowcalcOne');
+const calCancel = document.getElementById('calCancel');
+const calSlesh = document.getElementById('calSlesh');
+const calMnoj= document.getElementById('calMnoj');
+const calSeven = document.getElementById('calSeven');
+const calEight = document.getElementById('calEight');
+const calNine = document.getElementById('calNine');
+const calMinus = document.getElementById('calMinus');
+const calFour = document.getElementById('calFour');
+const calFive = document.getElementById('calFive');
+const calSix = document.getElementById('calSix');
+const calOne = document.getElementById('calOne');
+const calTwo = document.getElementById('calTwo');
+const calThre = document.getElementById('calThre');
+const calPlus = document.getElementById('calPlus');
+const calNull = document.getElementById('calNull');
+const calArow = document.getElementById('calArow');
+const calDot = document.getElementById('calDot');
+const calRowno = document.getElementById('calRowno');
+const butcol = document.querySelector('.calBut');
+
+let strcalc = '';
+
+
+
+
+/*     strokaSum.innerText = `${strcalc}`    */
+calCancel.onclick = () => {
+  strcalc = '0';
+  strokaSum.innerText = `${strcalc}`;
+  strcalc = '';
+  calCancel.style.backgroundColor = '#00ff37';
+  calCancel.style.color = '#001249';
+  setTimeout(()=>{
+    calCancel.style.backgroundColor = '#ff0062'
+    calCancel.style.color = '#001249';
+    }, 150);
+}
+calSlesh.onclick = () => {
+  strcalc+= '/';
+  strokaSum.innerText = `${strcalc}`;
+  calSlesh.style.backgroundColor = '#00ff37';
+  calSlesh.style.color = '#001249';
+  setTimeout(()=>{
+    butcol.style.backgroundColor = '#001249'
+    butcol.style.color = '#c5fdff';
+    }, 150);
+}
+calMnoj.onclick = () => {
+  strcalc+= '*';
+  strokaSum.innerText = `${strcalc}`;
+  calMnoj.style.backgroundColor = '#00ff37';
+  calMnoj.style.color = '#001249';
+  setTimeout(()=>{
+    calMnoj.style.backgroundColor = '#001249'
+    calMnoj.style.color = '#c5fdff';
+    }, 150);
+}
+calSeven.onclick = () => {
+  strcalc+= '7';
+  strokaSum.innerText = `${strcalc}`;
+  calSeven.style.backgroundColor = '#00ff37';
+  calSeven.style.color = '#001249';
+  setTimeout(()=>{
+    calSeven.style.backgroundColor = '#001249'
+    calSeven.style.color = '#c5fdff';
+    }, 150);
+}
+calEight.onclick = () => {
+  strcalc+= '8';
+  strokaSum.innerText = `${strcalc}`;
+  calEight.style.backgroundColor = '#00ff37';
+  calEight.style.color = '#001249';
+  setTimeout(()=>{
+    calEight.style.backgroundColor = '#001249'
+    calEight.style.color = '#c5fdff';
+    }, 150);
+}
+calNine.onclick = () => {
+  strcalc+= '9';
+  strokaSum.innerText = `${strcalc}`;
+  calNine.style.backgroundColor = '#00ff37';
+  calNine.style.color = '#001249';
+  setTimeout(()=>{
+    calNine.style.backgroundColor = '#001249'
+    calNine.style.color = '#c5fdff';
+    }, 150);
+}
+calMinus.onclick = () => {
+  strcalc+= '-';
+  strokaSum.innerText = `${strcalc}`;
+  calMinus.style.backgroundColor = '#00ff37';
+  calMinus.style.color = '#001249';
+  setTimeout(()=>{
+    calMinus.style.backgroundColor = '#001249'
+    calMinus.style.color = '#c5fdff';
+    }, 150);
+}
+calFour.onclick = () => {
+  strcalc+= '4';
+  strokaSum.innerText = `${strcalc}`;
+  calFour.style.backgroundColor = '#00ff37';
+  calFour.style.color = '#001249';
+  setTimeout(()=>{
+    calFour.style.backgroundColor = '#001249'
+    calFour.style.color = '#c5fdff';
+    }, 150);
+}
+calFive.onclick = () => {
+  strcalc+= '5';
+  strokaSum.innerText = `${strcalc}`;
+  calFive.style.backgroundColor = '#00ff37';
+  calFive.style.color = '#001249';
+  setTimeout(()=>{
+    calFive.style.backgroundColor = '#001249'
+    calFive.style.color = '#c5fdff';
+    }, 150);
+}
+calSix.onclick = () => {
+  strcalc+= '6';
+  strokaSum.innerText = `${strcalc}`;
+  calSix.style.backgroundColor = '#00ff37';
+  calSix.style.color = '#001249';
+  setTimeout(()=>{
+    calSix.style.backgroundColor = '#001249'
+    calSix.style.color = '#c5fdff';
+    }, 150);
+}
+calOne.onclick = () => {
+  strcalc+= '1';
+  strokaSum.innerText = `${strcalc}`;
+  calOne.style.backgroundColor = '#00ff37';
+  calOne.style.color = '#001249';
+  setTimeout(()=>{
+    calOne.style.backgroundColor = '#001249'
+    calOne.style.color = '#c5fdff';
+    }, 150);
+}
+calTwo.onclick = () => {
+  strcalc+= '2';
+  strokaSum.innerText = `${strcalc}`;
+  calTwo.style.backgroundColor = '#00ff37';
+  calTwo.style.color = '#001249';
+  setTimeout(()=>{
+    calTwo.style.backgroundColor = '#001249'
+    calTwo.style.color = '#c5fdff';
+    }, 150);
+}
+calThre.onclick = () => {
+  strcalc+= '3';
+  strokaSum.innerText = `${strcalc}`;
+  calThre.style.backgroundColor = '#00ff37';
+  calThre.style.color = '#001249';
+  setTimeout(()=>{
+    calThre.style.backgroundColor = '#001249'
+    calThre.style.color = '#c5fdff';
+    }, 150);
+}
+calPlus.onclick = () => {
+  strcalc+= '+';
+  strokaSum.innerText = `${strcalc}`;
+  calPlus.style.backgroundColor = '#00ff37';
+  calPlus.style.color = '#001249';
+  setTimeout(()=>{
+    calPlus.style.backgroundColor = '#001249'
+    calPlus.style.color = '#c5fdff';
+    }, 150);
+}
+calNull.onclick = () => {
+  strcalc+= '0';
+  strokaSum.innerText = `${strcalc}`;
+  calNull.style.backgroundColor = '#00ff37';
+  calNull.style.color = '#001249';
+  setTimeout(()=>{
+    calNull.style.backgroundColor = '#001249'
+    calNull.style.color = '#c5fdff';
+    }, 150);
+}
+calArow.onclick = () => {
+  strcalc= strcalc.slice(0, -1);
+  strokaSum.innerText = `${strcalc}`;
+  calArow.style.backgroundColor = '#00ff37';
+  calArow.style.color = '#001249';
+  setTimeout(()=>{
+    calArow.style.backgroundColor = '#001249'
+    calArow.style.color = '#c5fdff';
+    }, 150);
+}
+calDot.onclick = () => {
+  strcalc+= '.';
+  strokaSum.innerText = `${strcalc}`;
+  calDot.style.backgroundColor = '#00ff37';
+  calDot.style.color = '#001249';
+  setTimeout(()=>{
+    calDot.style.backgroundColor = '#001249'
+    calDot.style.color = '#c5fdff';
+    }, 150);
+}
+calRowno.onclick = () => {
+  strcalc=eval(strcalc);
+  strokaSum.innerText = `${strcalc}`;
+  strcalc = '';
+
+
+
+  calRowno.style.backgroundColor = '#00ff37';
+  calRowno.style.color = '#001249';
+  setTimeout(()=>{
+    calRowno.style.backgroundColor = '#ff0062'
+    calRowno.style.color = '#001249';
+    }, 150);
+}
+
