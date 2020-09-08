@@ -5,7 +5,7 @@
 }
 body {
     width: 100%;
-    height: 2000px;
+    height: 1000px;
     font-size: larger;
     font-weight: 700;
     position: relative;
@@ -14,22 +14,24 @@ body {
 
 #oneoc{
 overflow: hidden;
-height: 80vh;
+height: 70vh;
 width: 100%;
 }
 
 section {
 width: 100%;
-height: 80vh;
-background-color: rgba(0,0,0,.8)
+height: 70vh;
+background-color: rgba(0,0,0,.8);
 position: relative;
 overflow: hidden;
+border-bottom: crimson;
 }
 #buttonty{
 margin: auto;
-margin-top: 45%;
-width: 50%;
-height: 10%;
+margin-top: 15%;
+padding: 10%;
+width: 30px;
+height: 30px;
 border-radius: 5px;
 border: 2 px solid black;
 position: relative;
@@ -39,8 +41,8 @@ background-color: #144784;
 span{
 position: absolute;
 pointer-events: none;
-animation: anim 4s linear infinite;
-background: red;
+animation: anim 5s linear infinite;
+background:  rgba(0,0,0,.8);
 }
 @keyframes anim{
 0%{
@@ -55,23 +57,25 @@ opacity: 1;
 opacity: 1;
 }
 100%{
-transform: scale(1) translateY(-600%) rotate(360deg);
+transform: scale(1) translateY(-1900%) rotate(360deg);
 opacity: 0;
 filter: hue-rotate(360deg);
 }
 }
 
 #loader{
-position: relative;
-padding-top: 10px;
+transition: 0.5s;
+position: fixed;
 width: 100%;
-height: 40px;
+height: 100%;
+top: 0;
+left: 0;
 list-style-type: none;
 display: flex;
 justify-content: center;
 align-items: center;
 background-color: white;
-z-index: 8;
+z-index: 12;
 }
 #loader li{
 margin: 0.2rem;
@@ -146,10 +150,11 @@ background: linear-gradient(to left,#008aff,#00ffe7);
 filter: blur(10px);
 }
 #box {
+    border-top: 1px solid red;
     transition: 0.2s;
     width: 100%;
-    height: 100%;
-    background-color: red;
+    height: 70%;
+    background-color:  rgba(0,0,0,.8);
     padding: 50px 0 50px 0;
     display: flex;
     justify-content: center;
@@ -266,10 +271,10 @@ filter: blur(10px);
 /*---------------------------------*/
 
 #lennn {
-    border-top: 2px solid whitesmoke;
+    border-top: 2px solid crimson;
     width: 100%;
-    height: 100%;
-    background-color: red;
+    height: 40%;
+    background-color:  rgba(0,0,0,.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,9 +282,9 @@ filter: blur(10px);
 }
 
 #containerTwo {
-    background-color: #53ceff;
+    background-color:rgba(0,0,0,.8);
     width: 70%;
-    height: 40%;
+    height: 50%;
     border: 2px solid whitesmoke;
     border-radius: 2%;
     padding: 10px 0 0 0;
@@ -334,10 +339,10 @@ filter: blur(10px);
 }
 /*-------------------------------------*/
 #contFor{
-    background-color: red;
+    background-color:  rgba(0,0,0,.8);
     width: 100%;
     height: 230px;
-    border-top: 2px solid whitesmoke;
+    border-top: 2px solid crimson;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,7 +357,7 @@ filter: blur(10px);
     
 }
 #contCont{
-    background-color: red;
+    background-color:  rgba(0,0,0,.8);
     width: 100%;
     height: 55%;
     display: flex;
@@ -366,7 +371,7 @@ filter: blur(10px);
     font-family: Arial, Helvetica, sans-serif;
     width: 72px;
     height: 72px;
-    color:#85e3ff;
+    color:rgb(255, 0, 13);
     background-color: #00143a;
     margin-left: auto;
     margin-right: auto;  
@@ -377,7 +382,7 @@ filter: blur(10px);
     text-align: center;
 }
 #contButtons{
-    background-color: red;
+    background-color:  rgba(0,0,0,.8);
     width: 100%;
     height: 45%;
     display: flex;
@@ -387,7 +392,7 @@ filter: blur(10px);
 }
 #butOneO{
     text-align: center;
-    color: chartreuse;
+    color: rgb(255, 0, 13);
     padding: 7px;
     font-size: 28px;
     font-weight: 700;
@@ -397,18 +402,20 @@ filter: blur(10px);
     border-radius: 50%;
     margin-right: auto;
     margin-left: auto;
-    border: 2px solid whitesmoke;
-    border-bottom: 4px solid whitesmoke;
+    border: 2px solid #00d6fc;
+    border-bottom: 4px solid #00d6fc;
     cursor: pointer;
+    box-shadow: 0 0 10px 1px #0058fc;
 
 }
 #butOneO:hover{
     margin-top: 1px;
-    border-bottom: 3px solid whitesmoke;
+    border-bottom: 3px solid #00d6fc;
+    box-shadow: 0 0 10px 10px #00d6fc;
 }
 #butTwoO{
     text-align: center;
-    color: chartreuse;
+    color: rgb(255, 0, 13);
     padding: 9px;
     font-size: 28px;
     font-weight: 700;
@@ -418,17 +425,19 @@ filter: blur(10px);
     border-radius: 50%;
     margin-right: auto;
     margin-left: auto;
-    border: 2px solid whitesmoke;
-    border-bottom: 4px solid whitesmoke;
+    border: 2px solid #00d6fc;
+    border-bottom: 4px solid #00d6fc;
     cursor: pointer;
+    box-shadow: 0 0 10px 1px #0058fc;
 }
 #butTwoO:hover{
     margin-top: 1px;
-    border-bottom: 3px solid whitesmoke;
+    border-bottom: 3px solid #00d6fc;
+    box-shadow: 0 0 10px 10px #00d6fc;
 }    
 #butTreO{
     text-align: center;
-    color: chartreuse;
+    color: rgb(255, 0, 13);
     padding: 9px;
     font-size: 28px;
     font-weight: 700;
@@ -438,13 +447,15 @@ filter: blur(10px);
     border-radius: 50%;
     margin-right: auto;
     margin-left: auto;
-    border: 2px solid whitesmoke;
-    border-bottom: 4px solid whitesmoke;
+    border: 2px solid #00d6fc;
+    border-bottom: 4px solid #00d6fc;
     cursor: pointer;
+    box-shadow: 0 0 10px 1px #0058fc;
 }
 #butTreO:hover{
     margin-top: 1px;
-    border-bottom: 3px solid whitesmoke;
+    border-bottom: 3px solid #00d6fc;
+    box-shadow: 0 0 10px 10px #00d6fc;
 }  
 #butOne{ 
     width: 80px;

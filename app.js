@@ -98,8 +98,12 @@ let size = Math.random()*50;
 let randnom = Math.random();
 square.style.width =  20+size+'px';
 square.style.height = 20+size+'px';
-square.style.top = randnom*innerWidth+'px';
+
+let toppadding = Math.floor((((innerHeight/3)*2)+randnom*(innerHeight/3)));
+let topPadMinThrePer = toppadding - (toppadding*30/100)  /*для наглядности*/ 
+square.style.top = topPadMinThrePer+'px';
 square.style.left = Math.random()*innerWidth+'px';
+
 
 const bg = colorss[Math.floor(Math.random()*colorss.length)];
 square.style.background = bg;
@@ -108,7 +112,13 @@ section.appendChild(square);
 
 setTimeout(()=>{
 square.remove()
-}, 7000);
+}, 9000);
 }
 buttonty.onclick = ()=>{createSquare()};
 /*setInterval(createSquare, 400);*/
+/*--------------------------*/
+window.onload = function () {
+  const loader = document.getElementById('loader');
+  loader.style.display = 'none';
+}
+
