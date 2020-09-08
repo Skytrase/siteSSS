@@ -21,7 +21,7 @@ width: 100%;
 section {
 width: 100%;
 height: 70vh;
-background-color: rgba(0,0,0,.8);
+background: linear-gradient(#07ffb5, #0012b3);;
 position: relative;
 overflow: hidden;
 border-bottom: crimson;
@@ -29,19 +29,19 @@ border-bottom: crimson;
 #buttonty{
 margin: auto;
 margin-top: 15%;
-padding: 10%;
-width: 30px;
-height: 30px;
+padding: 5%;
+width: 20px;
+height: 20px;
 border-radius: 5px;
 border: 2 px solid black;
 position: relative;
 z-index: 11;
-background-color: #144784;
+background-color: #240068;
 }
 span{
 position: absolute;
 pointer-events: none;
-animation: anim 5s linear infinite;
+animation: anim 4s linear infinite;
 background:  rgba(0,0,0,.8);
 }
 @keyframes anim{
@@ -471,4 +471,29 @@ filter: blur(10px);
     width: 80px;
     height: 80px;
     padding: 10px 0 0 0;
+}
+#ret{
+    border-top: 2px solid red;
+    background: linear-gradient(#fcf800,#00fc69);
+    width: 100%;
+    height: 50%;
+    animation: dff 10s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes dff{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+#cahgesizebox{
+    background-color: rgb(255, 72, 0);
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    transition: 1s;
 }

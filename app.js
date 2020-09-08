@@ -122,3 +122,10 @@ window.onload = function () {
   loader.style.display = 'none';
 }
 
+/*--------------------------------------------- */
+
+const cahgesizebox = document.getElementById('cahgesizebox');
+cahgesizebox.onclick = ()=>{
+  cahgesizebox.style.width = (((Math.random()*innerWidth)/10)*8)+'px';
+cahgesizebox.style.height = (((Math.random()*innerHeight)/2)+10)+'px';
+}
