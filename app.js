@@ -165,18 +165,17 @@ calCancel.onclick = () => {
   calCancel.style.color = '#001249';
   setTimeout(()=>{
     calCancel.style.backgroundColor = '#ff0062'
-    calCancel.style.color = '#c5fdf';
+    calCancel.style.color = '#c5fdff';
     }, 150);
 }
 calSlesh.onclick = () => {
-  
   strcalc+= '/';
   let predSym = strcalc[strcalc.length -2];
   let lastSym = strcalc[strcalc.length -1];
   if(strcalc[0] == '/'){
     strcalc = '';  
   }
-  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+  else if(predSym == '.' || predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
     console.log(predSym)
     strcalc = strcalc.slice(0, -2)
     strcalc+= lastSym;
@@ -185,9 +184,6 @@ calSlesh.onclick = () => {
     strcalc = strcalc;
   }
   strokaSum.innerText = `${strcalc}`;
-  
-  
-  
   calSlesh.style.backgroundColor = '#00ff37';
   calSlesh.style.color = '#001249';
   setTimeout(()=>{
@@ -202,7 +198,7 @@ calMnoj.onclick = () => {
   if(strcalc[0] == '*'){
     strcalc = '';
   }
-  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+  else if(predSym == '.'|| predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
     console.log(predSym)
     strcalc = strcalc.slice(0, -2)
     strcalc+= lastSym;
@@ -256,7 +252,7 @@ calMinus.onclick = () => {
   if(strcalc[0] == '-'){
     strcalc = '';
   }
-  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+  else if(predSym == '.'|| predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
     console.log(predSym)
     strcalc = strcalc.slice(0, -2)
     strcalc+= lastSym;
@@ -339,7 +335,7 @@ calPlus.onclick = () => {
   if(strcalc[0] == '+'){
     strcalc = '';
   }
-  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+  else if(predSym == '.'|| predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
     console.log(predSym)
     strcalc = strcalc.slice(0, -2)
     strcalc+= lastSym;
@@ -377,7 +373,18 @@ calArow.onclick = () => {
 }
 calDot.onclick = () => {
   strcalc+= '.';
+  let predSym = strcalc[strcalc.length -2];
+  let lastSym = strcalc[strcalc.length -1];  
+  if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '.' || predSym == '+'){
+    console.log(strcalc)
+    strcalc = strcalc.slice(0, -1)
+    console.log(strcalc)
+  }
+  else{
+    strcalc = strcalc;
+  }
   strokaSum.innerText = `${strcalc}`;
+
   calDot.style.backgroundColor = '#00ff37';
   calDot.style.color = '#001249';
   setTimeout(()=>{
@@ -395,16 +402,61 @@ calRowno.onclick = () => {
     strcalc = '';
     strokaSum.innerText = `${strcalc}`;
   }
-  
-  
-
-
-
   calRowno.style.backgroundColor = '#00ff37';
   calRowno.style.color = '#001249';
   setTimeout(()=>{
-    calRowno.style.backgroundColor = '#ff0062'
+    calRowno.style.backgroundColor = '#ff0062';
     calRowno.style.color = '#c5fdff';
     }, 150);
+}
+/*---------------------------------------- */
+
+const pssOne =  document.getElementById('pssOne');
+const passString =  document.getElementById('passString');
+const butPOne =  document.getElementById('butPOne');
+const butPTwo =  document.getElementById('butPTwo');
+const butPTre =  document.getElementById('butPTre');
+let counterPasss = 12;
+let passMass = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+let passMassLen = passMass.length;
+let generateStr = '';
+
+
+pssOne.onclick = () => {
+  for (let i=0;i<counterPasss;i++){
+generateStr+= passMass[Math.floor(Math.random()*passMassLen)];
+  }
+  passString.innerText = `${generateStr}`;
+  generateStr = '';
+  pssOne.style.backgroundColor = '#00ff95';
+  pssOne.style.color = '#ff0062';
+  setTimeout(()=>{
+    pssOne.style.backgroundColor = '#00ffff4d';
+    pssOne.style.color = '#180044';
+    }, 150);
+}
+butPOne.onclick = () => {
+  counterPasss++;
+  butPTwo.innerText = `${counterPasss}`
+  butPOne.style.backgroundColor = '#00ff95';
+  butPOne.style.color = '#ff0062';
+  setTimeout(()=>{
+    butPOne.style.backgroundColor = '#00ffff4d';
+    butPOne.style.color = '#180044';
+    }, 150);
+}
+butPTre.onclick = () => {
+  counterPasss--;
+  if (counterPasss == -1){
+    counterPasss = 0;
+  } 
+  butPTwo.innerText = `${counterPasss}`
+  butPTre.style.backgroundColor = '#00ff95';
+  butPTre.style.color = '#ff0062';
+  setTimeout(()=>{
+    butPTre.style.backgroundColor = '#00ffff4d';
+    butPTre.style.color = '#180044';
+    }, 150);
+
 }
 
