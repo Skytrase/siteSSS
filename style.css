@@ -510,17 +510,19 @@ filter: blur(10px);
     text-align: center;
     font-size: 17px;
     color: rgb(191, 255, 236);
-    
+    font-family: fantasy;
     font-weight: 100;
 }
 #rowcalcOne{
-    padding: 8px 3px;
+    padding: 16px 3px 0 0;
     width: 200px;
     height: 50px;
-    background-color: #c5fdff;
-    color: black;
+    background-color: #00ffc8;
+    color: rgb(69, 0, 126);
     font-size: 24px;
     text-align: end;
+    font-weight: 100;
+    font-family: sans-serif;
 }
 .calBut{
     padding: 6%;

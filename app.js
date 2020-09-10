@@ -165,12 +165,29 @@ calCancel.onclick = () => {
   calCancel.style.color = '#001249';
   setTimeout(()=>{
     calCancel.style.backgroundColor = '#ff0062'
-    calCancel.style.color = '#001249';
+    calCancel.style.color = '#c5fdf';
     }, 150);
 }
 calSlesh.onclick = () => {
+  
   strcalc+= '/';
+  let predSym = strcalc[strcalc.length -2];
+  let lastSym = strcalc[strcalc.length -1];
+  if(strcalc[0] == '/'){
+    strcalc = '';  
+  }
+  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+    console.log(predSym)
+    strcalc = strcalc.slice(0, -2)
+    strcalc+= lastSym;
+  }
+  else{
+    strcalc = strcalc;
+  }
   strokaSum.innerText = `${strcalc}`;
+  
+  
+  
   calSlesh.style.backgroundColor = '#00ff37';
   calSlesh.style.color = '#001249';
   setTimeout(()=>{
@@ -180,7 +197,21 @@ calSlesh.onclick = () => {
 }
 calMnoj.onclick = () => {
   strcalc+= '*';
+  let predSym = strcalc[strcalc.length -2];
+  let lastSym = strcalc[strcalc.length -1];
+  if(strcalc[0] == '*'){
+    strcalc = '';
+  }
+  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+    console.log(predSym)
+    strcalc = strcalc.slice(0, -2)
+    strcalc+= lastSym;
+  }
+  else{
+    strcalc = strcalc;
+  }
   strokaSum.innerText = `${strcalc}`;
+
   calMnoj.style.backgroundColor = '#00ff37';
   calMnoj.style.color = '#001249';
   setTimeout(()=>{
@@ -220,6 +251,19 @@ calNine.onclick = () => {
 }
 calMinus.onclick = () => {
   strcalc+= '-';
+  let predSym = strcalc[strcalc.length -2];
+  let lastSym = strcalc[strcalc.length -1];
+  if(strcalc[0] == '-'){
+    strcalc = '';
+  }
+  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+    console.log(predSym)
+    strcalc = strcalc.slice(0, -2)
+    strcalc+= lastSym;
+  }
+  else{
+    strcalc = strcalc;
+  }
   strokaSum.innerText = `${strcalc}`;
   calMinus.style.backgroundColor = '#00ff37';
   calMinus.style.color = '#001249';
@@ -290,6 +334,19 @@ calThre.onclick = () => {
 }
 calPlus.onclick = () => {
   strcalc+= '+';
+  let predSym = strcalc[strcalc.length -2];
+  let lastSym = strcalc[strcalc.length -1];
+  if(strcalc[0] == '+'){
+    strcalc = '';
+  }
+  else if(predSym == '/' || predSym == '*' || predSym == '-' || predSym == '+'){
+    console.log(predSym)
+    strcalc = strcalc.slice(0, -2)
+    strcalc+= lastSym;
+  }
+  else{
+    strcalc = strcalc;
+  }
   strokaSum.innerText = `${strcalc}`;
   calPlus.style.backgroundColor = '#00ff37';
   calPlus.style.color = '#001249';
@@ -329,9 +386,17 @@ calDot.onclick = () => {
     }, 150);
 }
 calRowno.onclick = () => {
-  strcalc=eval(strcalc);
+  if(strcalc){
+    strcalc=eval(strcalc);
   strokaSum.innerText = `${strcalc}`;
   strcalc = '';
+  }
+  else{
+    strcalc = '';
+    strokaSum.innerText = `${strcalc}`;
+  }
+  
+  
 
 
 
@@ -339,7 +404,7 @@ calRowno.onclick = () => {
   calRowno.style.color = '#001249';
   setTimeout(()=>{
     calRowno.style.backgroundColor = '#ff0062'
-    calRowno.style.color = '#001249';
+    calRowno.style.color = '#c5fdff';
     }, 150);
 }
 
