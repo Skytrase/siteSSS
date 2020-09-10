@@ -758,7 +758,7 @@ filter: blur(10px);
 #kmbYou{
     margin: auto;
     font-family: sans-serif;
-    color: darkblue;
+    color: rgb(255, 217, 0);
     padding: 10px 0;
     font-size: 34px;
     text-align: center;
@@ -770,7 +770,7 @@ filter: blur(10px);
 #kmbBot{
     margin: auto;
     font-family: sans-serif;
-    color: darkblue;
+    color: rgb(72, 255, 0);
     padding: 10px 0;
     font-size: 34px;
     text-align: center;
@@ -783,6 +783,7 @@ filter: blur(10px);
     top: 44%;
     padding: 10px;
     background-color: rgb(0, 255, 170);
+   
     color: rgb(255, 0, 98);
     border-radius: 8px;
     margin: 10%;
