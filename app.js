@@ -459,4 +459,76 @@ butPTre.onclick = () => {
     }, 150);
 
 }
+/*----------------------------------------- */
 
+
+const knbOne = document.getElementById('knbOne');
+const knbNwo = document.getElementById('knbNwo');
+const knbThr = document.getElementById('knbThr');
+const kmbLImg = document.getElementById('kmbLImg');
+const kmbRImg = document.getElementById('kmbRImg');
+const kmbYou = document.getElementById('kmbYou');
+const kmbBot = document.getElementById('kmbBot');
+const knbPass = ['bumaga.png','kamen.png','nojnici.png']
+let scoreYou = 0;
+let scoreBot = 0;
+function randomIntegerJ(min, max) {
+  // случайное число от min до (max+1)
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
+knbOne.onclick = () => {
+  let vbvb = randomIntegerJ(0,2);
+  kmbLImg.style.backgroundImage = 'url(kamen.png)';
+  kmbRImg.style.backgroundImage = `url(${knbPass[vbvb]})`;
+  if(vbvb === 0){
+    console.log('lose')
+  scoreBot++;
+  kmbBot.innerText = `БОТ:${scoreBot}`
+  }
+  else if(vbvb === 1){
+    console.log('porovnu')
+  }
+  else{
+    console.log('pobeda')
+    scoreYou++;
+    kmbYou.innerText = `ВЫ:${scoreYou}`;
+  }
+}
+knbNwo.onclick = () => {
+  let vbvb = randomIntegerJ(0,2);
+  kmbLImg.style.backgroundImage = 'url(nojnici.png)';
+  kmbRImg.style.backgroundImage = `url(${knbPass[vbvb]})`;
+  if(vbvb === 1){
+    console.log('lose')
+    scoreBot++;
+  kmbBot.innerText = `БОТ:${scoreBot}`
+  }
+  else if(vbvb === 2){
+    console.log('porovnu')
+  }
+  else{
+    console.log('pobeda')
+    scoreYou++;
+    kmbYou.innerText = `ВЫ:${scoreYou}`;
+  }
+}
+knbThr.onclick = () => {
+  let vbvb = randomIntegerJ(0,2);
+  kmbLImg.style.backgroundImage = 'url(bumaga.png)';
+  kmbRImg.style.backgroundImage = `url(${knbPass[vbvb]})`;
+  if(vbvb === 2){
+    console.log('lose')
+    scoreBot++;
+  kmbBot.innerText = `БОТ:${scoreBot}`
+  }
+  else if(vbvb === 0){
+    console.log('porovnu')
+  }
+  else{
+    console.log('pobeda')
+    scoreYou++;
+    kmbYou.innerText = `ВЫ:${scoreYou}`;
+  }
+}
