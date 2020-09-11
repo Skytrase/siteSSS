@@ -43,7 +43,7 @@ button.onclick = () => {
     box.style.backgroundColor = `#${hesh}`
     colloo.innerText = `#${hesh}`
 }
-/*------------------- */
+/*-----------------
 inpt.oninput = () => {
   let rand8 = randomInteger(1, 8)
 st = inpt.value
@@ -57,7 +57,8 @@ valueslength.style.backgroundColor = arand[rand8]
 
 console.dir(inpt)
 }
-/*-------------- */
+*/
+/*-------------- 
 const butOneO = document.getElementById('butOneO')
 const butTwoO = document.getElementById('butTwoO')
 const butTreO = document.getElementById('butTreO')
@@ -77,7 +78,7 @@ butTreO.onclick = () => {
 contChild.innerText = `${x}`
 }
 
-/*-------------- */
+------------- */
 
 let progress = document.getElementById('scrollline');
 let totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -115,7 +116,7 @@ square.remove()
 }, 9000);
 }
 buttonty.onclick = ()=>{createSquare()};
-/*setInterval(createSquare, 400);*/
+
 /*--------------------------*/
 window.onload = function () {
   const loader = document.getElementById('loader');
@@ -580,7 +581,7 @@ knbThr.onclick = () => {
 }
 /*--------------------------------------- */
 const covBackGor = document.getElementById('covBackGor');
-const objkolvo = document.createElement('p');
+const objkolvo = document.getElementById('objkolvo');
 const gorodSection = document.getElementById('gorodSection');
 const butCovOne = document.getElementById('butCovOne');
 const butCovTwo = document.getElementById('butCovTwo');
@@ -588,39 +589,45 @@ const butCovTre = document.getElementById('butCovTre');
 const butCovFor = document.getElementById('butCovFor');
 
 
-
-
 butCovOne.onclick = () => {
   document.getElementById('covBackGor').src="gorod/gor2.jpg";
-
   objkolvo.innerText = '1426 ЗАБОЛЕВШИХ';
-  gorodSection.appendChild(objkolvo);
+  objkolvo.style.backgroundColor = '#00ffbf77';
+  objkolvo.style.color = '#070063';
   setTimeout(()=>{
-    objkolvo.remove()
+    objkolvo.style.backgroundColor = '#f0f1f3';
+    objkolvo.style.color = '#f0f1f3';
     }, 1550);
+  
 }
 butCovTwo.onclick = () => {
   document.getElementById('covBackGor').src="gorod/gor3.jpg";
   objkolvo.innerText = '3426 ЗАБОЛЕВШИХ';
-  gorodSection.appendChild(objkolvo);
+  objkolvo.style.backgroundColor = '#00ffbf77';
+  objkolvo.style.color = '#070063';
   setTimeout(()=>{
-    objkolvo.remove()
+    objkolvo.style.backgroundColor = '#f0f1f3';
+    objkolvo.style.color = '#f0f1f3';
     }, 1550);
+ 
 }
 butCovTre.onclick = () => {
   document.getElementById('covBackGor').src="gorod/gor4.jpg";
   objkolvo.innerText = '2426 ЗАБОЛЕВШИХ';
-  gorodSection.appendChild(objkolvo);
+  objkolvo.style.backgroundColor = '#00ffbf77';
+  objkolvo.style.color = '#070063';
   setTimeout(()=>{
-    objkolvo.remove()
+    objkolvo.style.backgroundColor = '#f0f1f3';
+    objkolvo.style.color = '#f0f1f3';
     }, 1550);
 }
 butCovFor.onclick = () => {
   document.getElementById('covBackGor').src="gorod/gor5.jpg";
-
   objkolvo.innerText = '6426 ЗАБОЛЕВШИХ';
-  gorodSection.appendChild(objkolvo);
+  objkolvo.style.backgroundColor = '#00ffbf77';
+  objkolvo.style.color = '#070063';
   setTimeout(()=>{
-    objkolvo.remove()
+    objkolvo.style.backgroundColor = '#f0f1f3';
+    objkolvo.style.color = '#f0f1f3';
     }, 1550);
 }

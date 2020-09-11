@@ -685,7 +685,7 @@ filter: blur(10px);
 #knbTop{
     height: 70%;
     width: 100%;
-    background: linear-gradient(90deg, rgb(255, 0, 179),rgb(111, 0, 255));
+    background: linear-gradient(green, #00ff6a);
     display: flex;
     justify-content: center;
     position: relative;
@@ -693,7 +693,7 @@ filter: blur(10px);
 #knbBotom{
     height: 30%;
     width: 100%;
-    background: linear-gradient(rgb(0, 255, 106),green);
+    background: linear-gradient(#00ff6a,green);
     display: flex;
     justify-content: space-around;
 }
@@ -758,19 +758,21 @@ filter: blur(10px);
 #kmbYou{
     margin: auto;
     font-family: sans-serif;
-    color: rgb(255, 217, 0);
+    color: rgb(0, 247, 255);
     padding: 10px 0;
     font-size: 34px;
     text-align: center;
     width: 90%;
     height: 16%;
     border: 2px solid #00ff88;
+    text-shadow: rgb(55, 0, 255) 0 0 28px;
     border-radius: 15px;
 }
 #kmbBot{
     margin: auto;
     font-family: sans-serif;
-    color: rgb(72, 255, 0);
+    color: rgb(255, 21, 157);
+    text-shadow: rgb(255, 0, 34) 0 0 28px;
     padding: 10px 0;
     font-size: 34px;
     text-align: center;
@@ -829,18 +831,44 @@ filter: blur(10px);
     color: rgb(255, 38, 0);
     cursor: pointer;
 }
-#gorodSection>p{
-    top: 50%;
+#objkolvo{
+    margin: 4px;
     width: 100%;
     height: auto;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 0, 0, 0.386);  
-    color: rgb(0, 238, 255);
-    text-shadow: rgb(0, 0, 0) 0 0 4px;
-    border-radius: 8px;   
+    padding: 16px;
+    background-color: #f0f1f3;
+    color: rgb(0, 238, 255); 
     font-size: 30px;
-    position: absolute;
     z-index: 999;
+    transition: 2s;
+}
+#blor{
     transition: 1s;
 }
+/*
+<div id="contFor">
+        <div id="contFive">
+            <div id="contCont">
+                <p id="contChild">0</p>
+            </div>
+            <div id="contButtons">
+               <div id="butOne"><p id="butOneO">-</p></div>
+               <div id="butTwo"><p id="butTwoO">0</p></div>
+               <div id="butTre"><p id="butTreO">+</p></div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div id="lennn">
+        <div id="containerTwo">
+            <p id="valueslength">0</p>
+            <div id="containerThree">    
+                <input class="inpt" type="text" name="lsumb" value="ПИШИ СЮДА">
+            </div>
+        </div>
+    </div>
+    */
+    
