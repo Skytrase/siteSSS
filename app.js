@@ -473,6 +473,8 @@ const kmbBot = document.getElementById('kmbBot');
 const knbPass = ['bumaga.png','kamen.png','nojnici.png'];
 const knbTop = document.getElementById('knbTop');
 const objavlenie = document.createElement('p');
+const circleR = document.getElementById('circleR');
+const circleL = document.getElementById('circleL');
 let scoreYou = 0;
 let scoreBot = 0;
 function randomIntegerJ(min, max) {
@@ -489,16 +491,22 @@ knbOne.onclick = () => {
   kmbBot.innerText = `БОТ:${scoreBot}`
   objavlenie.innerText = 'ПОРАЖЕНИЕ';/**/ 
   knbTop.appendChild(objavlenie);
+  circleL.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleL.style.display = 'none'
     }, 550);
   }
   else if(vbvb === 1){
     console.log('porovnu')
     objavlenie.innerText = 'НИЧЬЯ';/**/ 
   knbTop.appendChild(objavlenie);
+  circleR.style.display = 'block'
+  circleL.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleR.style.display = 'none'
+    circleL.style.display = 'none'
     }, 550);
   }
   else{
@@ -506,8 +514,10 @@ knbOne.onclick = () => {
     scoreYou++;
     objavlenie.innerText = 'ПОБЕДА';/**/ 
   knbTop.appendChild(objavlenie);
+  circleR.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleR.style.display = 'none'
     }, 550);
     kmbYou.innerText = `ВЫ:${scoreYou}`;
   }
@@ -520,10 +530,11 @@ knbNwo.onclick = () => {
     console.log('lose')
     scoreBot++;
     objavlenie.innerText = 'ПОРАЖЕНИЕ';/**/ 
-    
+    circleL.style.display = 'block'
   knbTop.appendChild(objavlenie);
   setTimeout(()=>{
     objavlenie.remove()
+    circleL.style.display = 'none'
     }, 550);
   kmbBot.innerText = `БОТ:${scoreBot}`
   }
@@ -531,8 +542,12 @@ knbNwo.onclick = () => {
     console.log('porovnu')
     objavlenie.innerText = 'НИЧЬЯ';/**/ 
   knbTop.appendChild(objavlenie);
+  circleR.style.display = 'block'
+  circleL.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleR.style.display = 'none'
+    circleL.style.display = 'none'
     }, 550);
   }
   else{
@@ -540,8 +555,10 @@ knbNwo.onclick = () => {
     scoreYou++;
     objavlenie.innerText = 'ПОБЕДА';/**/ 
   knbTop.appendChild(objavlenie);
+  circleR.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleR.style.display = 'none'
     }, 550);
     kmbYou.innerText = `ВЫ:${scoreYou}`;
   }
@@ -555,8 +572,10 @@ knbThr.onclick = () => {
     scoreBot++;
     objavlenie.innerText = 'ПОРАЖЕНИЕ';/**/ 
   knbTop.appendChild(objavlenie);
+  circleL.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleL.style.display = 'none'
     }, 550);
   kmbBot.innerText = `БОТ:${scoreBot}`
   }
@@ -564,8 +583,12 @@ knbThr.onclick = () => {
     console.log('porovnu')
     objavlenie.innerText = 'НИЧЬЯ';/**/ 
   knbTop.appendChild(objavlenie);
+  circleR.style.display = 'block'
+  circleL.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleR.style.display = 'none'
+    circleL.style.display = 'none'
     }, 550);
   }
   else{
@@ -573,8 +596,10 @@ knbThr.onclick = () => {
     scoreYou++;
     objavlenie.innerText = 'ПОБЕДА';/**/ 
   knbTop.appendChild(objavlenie);
+  circleR.style.display = 'block'
   setTimeout(()=>{
     objavlenie.remove()
+    circleR.style.display = 'none'
     }, 550);
     kmbYou.innerText = `ВЫ:${scoreYou}`;
   }

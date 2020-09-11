@@ -680,7 +680,7 @@ filter: blur(10px);
 #knb{
     width: 100%;
     height: 60%;
-   
+    border-bottom:10px solid tomato;
 }
 #knbTop{
     height: 70%;
@@ -736,17 +736,18 @@ filter: blur(10px);
 }
 #kmbLImg{
     margin: auto;
-    width: 95%;
+    width: 100%;
     height: 80%;
     background-image: url("bumaga.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     transition: 1s;
+    
 }
 #kmbRImg{
     margin: auto;
-    width: 95%;
+    width: 100%;
     height: 80%;
     background-image: url("bumaga.png");
     background-size: contain;
@@ -756,6 +757,7 @@ filter: blur(10px);
     
 }
 #kmbYou{
+    background-color: rgba(255, 255, 0, 0.575);
     margin: auto;
     font-family: sans-serif;
     color: rgb(0, 247, 255);
@@ -769,6 +771,7 @@ filter: blur(10px);
     border-radius: 15px;
 }
 #kmbBot{
+    background-color: rgba(255, 255, 0, 0.575);
     margin: auto;
     font-family: sans-serif;
     color: rgb(255, 21, 157);
@@ -793,6 +796,25 @@ filter: blur(10px);
     position: absolute;
     z-index: 999;
 }
+#circleR{
+    background-color: #ff000048 ;
+    width: 100%;
+    height: 100%;
+    display: none;  
+    margin: auto;
+}
+#circleL{
+    background-color: #ff000048 ;
+    width: 100%;
+    height: 100%;
+    display: none;
+    margin: auto;
+    
+}
+
+
+
+
 #gorodSection{
     width: 100%;
     min-height: 30%;
