@@ -791,3 +791,56 @@ filter: blur(10px);
     position: absolute;
     z-index: 999;
 }
+#gorodSection{
+    width: 100%;
+    min-height: 30%;
+    background-color: #f0f1f3;
+    border-bottom:10px solid tomato;
+    position: relative;
+    transition: 0.5s;
+}
+
+#covBackGor{
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 1s;
+}
+#covButtons{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+#covH{
+    text-align: center;
+    padding: 10px 0 5px 0;
+    width: 100%;
+    height: 6%;
+}
+.ret{
+    width: 60px;
+    height: 30px;
+    background-color: rgba(0, 247, 255, 0.3);
+    border: 1px solid rgba(0, 174, 255, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    color: rgb(255, 38, 0);
+    cursor: pointer;
+}
+#gorodSection>p{
+    top: 50%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.386);  
+    color: rgb(0, 238, 255);
+    text-shadow: rgb(0, 0, 0) 0 0 4px;
+    border-radius: 8px;   
+    font-size: 30px;
+    position: absolute;
+    z-index: 999;
+    transition: 1s;
+}

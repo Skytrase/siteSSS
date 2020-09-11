@@ -578,3 +578,49 @@ knbThr.onclick = () => {
     kmbYou.innerText = `ВЫ:${scoreYou}`;
   }
 }
+/*--------------------------------------- */
+const covBackGor = document.getElementById('covBackGor');
+const objkolvo = document.createElement('p');
+const gorodSection = document.getElementById('gorodSection');
+const butCovOne = document.getElementById('butCovOne');
+const butCovTwo = document.getElementById('butCovTwo');
+const butCovTre = document.getElementById('butCovTre');
+const butCovFor = document.getElementById('butCovFor');
+
+
+
+
+butCovOne.onclick = () => {
+  document.getElementById('covBackGor').src="gorod/gor2.jpg";
+
+  objkolvo.innerText = '1426 ЗАБОЛЕВШИХ';
+  gorodSection.appendChild(objkolvo);
+  setTimeout(()=>{
+    objkolvo.remove()
+    }, 1550);
+}
+butCovTwo.onclick = () => {
+  document.getElementById('covBackGor').src="gorod/gor3.jpg";
+  objkolvo.innerText = '3426 ЗАБОЛЕВШИХ';
+  gorodSection.appendChild(objkolvo);
+  setTimeout(()=>{
+    objkolvo.remove()
+    }, 1550);
+}
+butCovTre.onclick = () => {
+  document.getElementById('covBackGor').src="gorod/gor4.jpg";
+  objkolvo.innerText = '2426 ЗАБОЛЕВШИХ';
+  gorodSection.appendChild(objkolvo);
+  setTimeout(()=>{
+    objkolvo.remove()
+    }, 1550);
+}
+butCovFor.onclick = () => {
+  document.getElementById('covBackGor').src="gorod/gor5.jpg";
+
+  objkolvo.innerText = '6426 ЗАБОЛЕВШИХ';
+  gorodSection.appendChild(objkolvo);
+  setTimeout(()=>{
+    objkolvo.remove()
+    }, 1550);
+}
