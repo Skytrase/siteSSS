@@ -20,7 +20,6 @@ function randomInteger(min, max) {
     return Math.round(rand);
   }
 
-  console.log(inpt)
 
 button.onclick = () => {
     let hesh = randomInteger(111111, 999999)
@@ -32,13 +31,13 @@ button.onclick = () => {
 
     console.log(typeof cirOne.clientHeight)
 
-    cirOne.style.backgroundColor = `#${hesh1}`
+    cirOne.style.background  = `linear-gradient(#${hesh1},#${hesh2});`
     cirTwo.style.backgroundColor = `#${hesh2}`
     cirThre.style.backgroundColor = `#${hesh4}`
 
     
 
-    container.style.backgroundColor = `#${hesh4}`
+    container.style.backgroundColor = `linear-gradient(#${hesh1},#${hesh2});`
 
     box.style.backgroundColor = `#${hesh}`
     colloo.innerText = `#${hesh}`
@@ -95,6 +94,7 @@ const buttonty = document.getElementById('buttonty');
 function createSquare(){
 const section = document.querySelector('section');
 const square = document.createElement('span');
+square.classList.add('sp');
 let size = Math.random()*50;
 let randnom = Math.random();
 square.style.width =  20+size+'px';
@@ -656,3 +656,33 @@ butCovFor.onclick = () => {
     objkolvo.style.color = '#f0f1f3';
     }, 1550);
 }
+/*------------------------------*/
+const text = document.querySelector('#covH');
+const strText = text.textContent;
+const splitText = strText.split('');
+text.textContent = '';
+for(let i=0; i<splitText.length; i++){
+  text.innerHTML += "<span class='brr'>"+splitText[i]+"</span>";
+}
+let char = 0;
+let timerStr = setInterval(onTick,50);
+function onTick(){
+  const spanL = text.querySelectorAll('.brr')[char];
+  spanL.classList.add('fade');
+  console.log(text.querySelectorAll('.brr')[char])
+  char++;
+  if(char === splitText.length){
+    complete();
+  }
+}
+function complete(){
+  clearInterval(timerStr);
+  timerStr='null'
+}
+/*----------------------------*/
+document.querySelector('#topCord').onmousemove = (e)=>{
+  console.log(e);
+  document.querySelector('#oneCord').innerHTML = 'X: '+e.offsetX;
+  document.querySelector('#twoCord').innerHTML = 'Y: '+e.offsetY;
+}
+/*-----------------------*/

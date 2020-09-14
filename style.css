@@ -38,7 +38,7 @@ position: relative;
 z-index: 11;
 background-color: #240068;
 }
-span{
+span.sp{
 position: absolute;
 pointer-events: none;
 animation: anim 4s linear infinite;
@@ -838,6 +838,7 @@ filter: blur(10px);
 
 }
 #covH{
+    font-family: sans-serif;
     text-align: center;
     padding: 10px 0 5px 0;
     width: 100%;
@@ -867,4 +868,41 @@ filter: blur(10px);
 }
 #blor{
     transition: 1s;
+}
+.brr{
+opacity: 0;
+transition: all 6s ease;
+display: inline-block;
+min-width: 6px;
+transform: translateY(900px) translateX(1000px) rotate(-9000deg);
+color: rgb(145, 255, 0);
+}
+.fade{
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+    color: rgb(0, 50, 216);
+    }
+#secCordi{
+    background: linear-gradient( orangered, orange);
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+}
+#cordBlock{
+    margin: auto;
+    width: 80%;
+    height: 300px;
+}
+#topCord{
+    width: 100%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.541);
+}
+#bottomCord{
+    width: 100%;
+    height: 20%;
+    background: rgba(102, 255, 0, 0.527);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
