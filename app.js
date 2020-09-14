@@ -747,3 +747,31 @@ for(let i=0; i< massivProverki.length ;i++){
   }
 }
 }
+/*------------------------*/
+let images = document.querySelectorAll('.sli');
+let current = 0;
+setInterval(() => {
+  for(let i=0; i<images.length;i++){
+    images[i].classList.add('opacity0');
+  }
+  images[current].classList.remove('opacity0');
+  if(current+1 == images.length){
+    current = 0;
+  }
+  else{
+    current++;
+  }
+}, 6000);
+function slider() {
+for(let i=0; i<images.length;i++){
+  images[i].classList.add('opacity0');
+}
+images[current].classList.remove('opacity0');
+if(current+1 == images.length){
+  current = 0;
+}
+else{
+  current++;
+}
+}
+document.querySelector('#infinity-wrap').onclick = slider;
