@@ -29,17 +29,15 @@ button.onclick = () => {
 
     let radiuss = randomInteger(120, 160)
 
-    console.log(typeof cirOne.clientHeight)
 
-    cirOne.style.background  = `linear-gradient(#${hesh1},#${hesh2});`
+    cirOne.style.background  = `#${hesh1}`
     cirTwo.style.backgroundColor = `#${hesh2}`
     cirThre.style.backgroundColor = `#${hesh4}`
 
     
 
-    container.style.backgroundColor = `linear-gradient(#${hesh1},#${hesh2});`
+    container.style.background = `#${hesh}`
 
-    box.style.backgroundColor = `#${hesh}`
     colloo.innerText = `#${hesh}`
 }
 /*-----------------
