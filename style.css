@@ -907,3 +907,81 @@ color: rgb(145, 255, 0);
     justify-content: space-around;
     align-items: center;
 }
+#secTic{
+    background: linear-gradient( rgb(0, 255, 85), rgba(0, 255, 42, 0.815));
+    padding: 20px 0 10px 0;
+    border-bottom: 10px solid rgba(255, 68, 0, 0.911);
+}
+#ticTacToe{
+    margin: auto;
+    width:300px;
+    height: 300px;
+    position: relative;
+}
+.tic{
+    background: #ffffffc4;
+    border: 1px solid rgba(9, 255, 0, 0.904);
+    width: 100px;
+    height: 100px;
+    float: left;
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(0, 247, 255);
+    font-family: sans-serif;
+    text-shadow: 2px 2px 6px rgb(0, 119, 255);
+    cursor: pointer;
+}
+#pobedaTic{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 50px;
+    display: none;
+}
+#porajenieTic{
+    position: absolute;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 50px;
+    display: none;
+}
+#cheyHod{
+    
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(0, 247, 255);
+    font-family: sans-serif;
+    text-shadow: 2px 2px 6px rgb(0, 119, 255);
+    font-size: 4rem;
+    text-align: center;
+    display: flex;
+}
+#hod{
+    background-color: #00aeff57;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#clearT{
+    background-color: #00aeff57;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 20%;
+}
+#winT{
+    border-radius: 50%;
+    background-color: #00aeff57;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}

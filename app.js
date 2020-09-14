@@ -684,3 +684,66 @@ document.querySelector('#topCord').onmousemove = (e)=>{
   document.querySelector('#twoCord').innerHTML = 'Y: '+e.offsetY;
 }
 /*-----------------------*/
+
+const ticTacToe = document.getElementById('ticTacToe');
+let kolHod = 0;
+const massivProverki = [
+  [0,1,2],   /* i */
+  [3,4,5],
+  [6,7,8],
+  [0,3,6],
+  [1,4,7],
+  [2,5,8],
+  [0,4,8],
+  [6,4,2],
+]
+ticTacToe.addEventListener('click', function(e){
+  document.querySelector('#clearT').onclick = ()=>{
+    console.log('sdsd')
+    for(let inn=0; inn< document.getElementsByClassName('tic').length ;inn++){
+      document.getElementsByClassName('tic')[inn].innerHTML = '';
+    }
+  }
+  if((kolHod % 2) == 0){
+    e.target.innerHTML = 'X';
+    document.querySelector('#hod').innerHTML = 'O';
+}
+  else if((kolHod % 1) == 0){
+    e.target.innerHTML = 'O';
+    document.querySelector('#hod').innerHTML = 'X';}
+  kolHod++;
+  proverkaTic();
+});
+const arrObTic = document.getElementsByClassName('tic');
+clearTic = function(){
+  for(let i=0; i< massivProverki.length ;i++){
+  arrObTic[massivProverki[i][0]].style.background = '#ffffffc4';
+  arrObTic[massivProverki[i][1]].style.background = '#ffffffc4';
+  arrObTic[massivProverki[i][2]].style.background = '#ffffffc4';
+  arrObTic[massivProverki[i][0]].innerHTML = '';
+  arrObTic[massivProverki[i][1]].innerHTML = '';
+  arrObTic[massivProverki[i][2]].innerHTML = '';
+  document.querySelector('#winT').innerHTML = 'W';
+  document.querySelector('#winT').style.background = ' #00aeff57';
+  }
+}
+function proverkaTic(){
+
+for(let i=0; i< massivProverki.length ;i++){
+  if(arrObTic[massivProverki[i][0]].innerHTML == 'X' && arrObTic[massivProverki[i][1]].innerHTML == 'X' && arrObTic[massivProverki[i][2]].innerHTML == 'X'){
+    document.querySelector('#winT').innerHTML = 'X';
+    document.querySelector('#winT').style.background = 'red';
+    arrObTic[massivProverki[i][0]].style.background = '#ff3c00'; /*  */
+    arrObTic[massivProverki[i][1]].style.background = '#ff3c00';
+    arrObTic[massivProverki[i][2]].style.background = '#ff3c00';
+    setTimeout(clearTic,1000)
+  }
+  else  if(arrObTic[massivProverki[i][0]].innerHTML == 'O' && arrObTic[massivProverki[i][1]].innerHTML == 'O' && arrObTic[massivProverki[i][2]].innerHTML == 'O'){
+    document.querySelector('#winT').innerHTML = 'O';
+    arrObTic[massivProverki[i][0]].style.background = '#ff3c00'; /*  */
+    arrObTic[massivProverki[i][1]].style.background = '#ff3c00';
+    arrObTic[massivProverki[i][2]].style.background = '#ff3c00';
+    setTimeout(clearTic,1000)
+  }
+}
+}
