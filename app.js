@@ -775,3 +775,21 @@ else{
 }
 }
 document.querySelector('#infinity-wrap').onclick = slider;
+/*----------------------------------*/
+function weatherAPI(){
+fetch('http://api.openweathermap.org/data/2.5/weather?q=Konotop,ua&APPID=9c850d339ac904b9201a96b8fc4d51d8')
+  .then(function (resp) { 
+    return resp.json()
+   })
+  .then(function (date) {
+    document.querySelector('.wth1').textContent = date.name.toUpperCase();
+    console.log(date)
+    console.log(date.main)
+    document.querySelector('.wth2').innerHTML = `${Math.round(date.main.temp-273,15)}&deg`
+    document.querySelector('.wth3').innerHTML = `<img src='https://openweathermap.org/img/wn/${date.weather[0].icon}@2x.png'>`
+  })
+  .catch(function () {
+  })
+}
+
+  document.querySelector('#butwth4').onclick = weatherAPI;
