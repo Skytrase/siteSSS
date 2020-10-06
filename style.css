@@ -193,15 +193,6 @@ canvas{
     left: 0;
     z-index: 3;
 }
-.services video{
-    left: 0;
-    top: 0;
-    position: absolute;
-    margin: 0;
-    min-width: 100%;
-    height: 100%;
-    z-index: 2;
-}
 .llil{
     position: relative;
     z-index: 4;

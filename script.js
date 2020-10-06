@@ -68,14 +68,22 @@ butClose.onclick = () =>{
     document.querySelector('.slider').style.display = 'flex';
  }
 
-
-
+let objServ = document.querySelector('#services');
+objServ.onclick = ()=>console.dir(objServ.offsetHeight);
+console.dir(objServ);
+let canv = document.querySelector('#c');
+objServ.onclick = ()=>{
+    canv.height = objServ.offsetHeight;
+    canv.width = objServ.offsetWidth;  
+};
+canv.height = objServ.offsetHeight;
+canv.width = objServ.offsetWidth;
 
 
  ((c)=>{
     let $ = c.getContext('2d'),
-            w = c.width = window.innerWidth,
-            h = c.height = window.innerHeight,
+            w = c.width = objServ.offsetWidth,
+            h = c.height = objServ.offsetHeight,
             pi2 = Math.PI*2,
             random = t=>Math.random()*t,
             binRandom = (f)=>Math.random()<f,
@@ -88,7 +96,7 @@ butClose.onclick = () =>{
                 }
             });
     function draw(){
-        (h !== innerHeight || w!==innerWidth) && (w=c.width=innerWidth,h=c.height=innerHeight);
+        (h !== objServ.offsetHeight || w!==objServ.offsetWidth) && (w=c.width=objServ.offsetWidth,h=c.height=objServ.offsetHeight);
         $.fillStyle="#222";
         $.fillRect(0,0,w,h);
         arr.forEach(p=>{
