@@ -5,8 +5,12 @@
     font-family:  sans-serif;
     scroll-behavior: smooth;
 }
+body{
+    cursor: url(cursor200.png), default;
+    position: relative;
+}
 section{
-padding: 100px;
+padding: 70px;
 }
 #scrollbox {
     width: 100%;
@@ -93,6 +97,11 @@ filter: blur(10px);
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+    cursor:  url(cursor300.png), pointer ;
+}
+.btn:hover{
+    background: #06cdff;
+    color: #000725;
 }
 header{
     position: fixed;
@@ -108,7 +117,7 @@ header{
 }
 header.sticky{
     padding: 20px 100px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.89);
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 header.sticky .logo{
@@ -121,6 +130,7 @@ header .logo{
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 2px;
+    cursor:  url(cursor300.png), pointer ;
 }
 header ul{
     position: relative;
@@ -136,6 +146,11 @@ header ul li a{
     margin: 0 15px;
     color: aliceblue;
     text-decoration: none;
+    cursor:  url(cursor300.png), pointer ;
+}
+header ul li a:hover{
+    color: rgb(0, 204, 255);
+    text-shadow: 0px 0px 2px #00ffe7;
 }
 header.sticky ul li a{
     color: #111;
@@ -168,7 +183,28 @@ img{
     max-width: 100%;
 }
 .services{
-background: #111;
+background: #000;
+position: relative;
+}
+canvas{
+    background: #111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.services video{
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin: 0;
+    min-width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.llil{
+    position: relative;
+    z-index: 4;
 }
 .heading.white{
 color: #fff;
@@ -212,7 +248,8 @@ color: #fff;
     max-width: 100%;
 }
 .textimonial{
-    background: #f7f7f7;
+    background-color: rgba(120, 130, 133, 0.438);
+    
 }
 .textimonial .content{
     display: flex;
@@ -281,9 +318,13 @@ color: #fff;
 .formBx form input[type="submit"]{
     max-height: 100px;
     background: #2196f3;
-    cursor: pointer;
+    cursor:  url(cursor300.png), pointer ;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+.formBx form input[type="submit"]:hover{
+    background: #06cdff;
+    color: #000725;
 }
 .contactInfo{
     min-width: 40%;
@@ -324,6 +365,91 @@ color: #fff;
     text-align: center;
     padding: 10px;
 }
+.slider{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 3, 151, 0.555);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+}
+.windslider{
+    width: 1040px;
+    height: 700px;
+    transition: 0.5s;
+}
+.windslider-slider{
+    overflow: hidden;
+    width: 1040px;
+    height: 700px;
+    position:relative;
+}
+.lbut{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background: url(leftStr.png);
+    background-size: cover;
+    z-index: 2002;
+}
+.rbut{
+    position: absolute;
+    top: 300px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url(rightStr.png);
+    background-size: cover;
+    z-index: 2002;
+}
+.cbut{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url(close.png);
+    background-size: contain;
+    z-index: 2002;
+}
+.lbut:active{
+    box-shadow: -2px 2px 2px #008aff;
+    border-radius: 50%;
+    width: 61px;
+    height: 61px;
+    border: 1px solid rgba(70, 218, 255, 0.5);
+}
+.cbut:active{
+    border-radius: 50%;
+    width: 63px;
+    height: 63px;
+    box-shadow: 1px 2px 2px #008aff;
+}
+.rbut:active{
+    box-shadow: 2px 2px 2px #008aff;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    border: 1px solid rgba(70, 218, 255, 0.5);
+}
+.windslider-slider .imgg{
+    width: 1040px;
+    height: 700px;
+    position: absolute;
+    opacity: 1;
+    transition: all ease 0.5s;
+}
+.windslider-slider .opacity0{
+    opacity: 0;
+}
+.btn.onc{
+    border: 1px solid rgb(0, 174, 255);
+}
 /* responsive */
 @media (max-width: 991px){
     header,
@@ -360,7 +486,7 @@ color: #fff;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 30px;
-        cursor: pointer;
+        cursor:  url(cursor300.png), pointer ;
         transition: 0.2s;
     }
     .toggle.active{
@@ -415,9 +541,113 @@ color: #fff;
         padding: 60px 40px;
         background: #2196f3;
     }
+    .windslider{
+        width: 600px;
+        height: 450px;
+    }
+    .windslider-slider{
+        width: 600px;
+        height: 450px;
+    }
+    .windslider-slider .imgg{
+        width: 600px;
+        height: 450px;
+    }
+    .rbut{
+        top: 200px;
+    }
+    .lbut{
+        top: 200px;
+    }
+    .cbut{
+        width: 40px;
+        height: 40px;
+        right: 0;
+    }
+    .cbut:active{
+        width: 40px;
+        height: 40px;
+    }
 }
-@media (max-width: 600px){
+@media (max-width: 601px){
     header, header.sticky {
         padding: 20px;
+    }
+    .windslider{
+        width: 300px;
+        height: 200px;
+    }
+    .windslider-slider{
+        width: 300px;
+        height: 200px;
+    }
+    .windslider-slider .imgg{
+        width: 300px;
+        height: 200px;
+    }
+    .rbut {
+        top: 82px;
+        right: 2px;
+        width: 40px;
+        height: 40px;
+    }
+    .lbut {
+        top: 82px;
+        left: 2px;
+        width: 40px;
+        height: 40px;
+    }
+    .cbut:active{
+        width: 38px;
+        height: 38px;
+    }
+    .rbut:active{
+        width: 38px;
+        height: 38px;
+    }
+    .lbut:active{
+        width: 38px;
+        height: 38px;
+    }
 }
-}
+
+
+/*----------LOAder-----------*/
+#loader{
+    transition: 0.5s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #12131b;
+    z-index: 12;
+    }
+    #loader li{
+    margin: 0.2rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: #00c3ff;
+    animation: dm 0.8s ease infinite alternate both;
+    }
+    #loader:nth-child(2){
+        animation-delay: 0.2s;
+        }
+        #loader:nth-child(3){
+        animation-delay: 0.4s;
+        }
+        #loader:nth-child(4){
+        animation-delay: 0.6s;
+        }
+        @keyframes dm{
+        from {transform: translateY(0);}
+        
+        to {transform: translateY(-1rem);}
+        }
+
+
