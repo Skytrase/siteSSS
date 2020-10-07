@@ -172,22 +172,39 @@ let tmr;
      let radius = (Math.random()*30);
      x = (Math.floor(Math.random()*canvas1.width));
      y = (Math.floor(Math.random()*canvas1.height));
-     col1 = (0+(Math.random()*100));
+     col1 = (0+(Math.random()*150));
     col2 = (149+(Math.random()*50));
     col3 = (190+(Math.random()*64));
-    col4 = (Math.floor(3+Math.random()*7));
+    col4 = (Math.floor(3+Math.random()*4));
     let lingrad = ctx.createLinearGradient(0, 0, canvas1.width, canvas1.height);
+    
      ctx.beginPath();
+     
      lingrad.addColorStop(0, `rgba(${col1}, ${col3}, ${col2}, 0.${col4})`);
-     lingrad.addColorStop(1, '#00a2ff');
+     lingrad.addColorStop(1, `rgba(${(0+(Math.random()*150))}, ${(190+(Math.random()*64))} , ${(149+(Math.random()*50))}, 0.${(Math.floor(3+Math.random()*4))})`);
      ctx.fillStyle = lingrad;
      ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
      ctx.fill();
      console.log('-------------');
-     tmr = setTimeout(draw,150);
+     tmr = setTimeout(draw,100);
+     ctx.strokeStyle =  "#00426e75"
      ctx.stroke()
  }
+ fuLLLILLLc.addEventListener('mousemove', gyda)
+ function gyda(e){
+    ctx.beginPath();
+    let radius = 5+(Math.random()*20);
+    col1 = `${(0+(Math.random()*150))}`;
+    ctx.fillStyle = `#3cff0088`;
+    let x = e.offsetX;
+    let y = e.offsetY;
+    ctx.arc(x , y, radius, startAngle, endAngle, anticlockwise);
+    ctx.strokeStyle =  " #15005fcc"
+    ctx.stroke();
+    ctx.fill();
+    console.log(e)
     
+ }
 
 
     
