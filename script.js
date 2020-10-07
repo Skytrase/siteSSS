@@ -142,13 +142,20 @@ let asd = '';
 
  canvas1.height = containerCanv.offsetHeight;
  canvas1.width = containerCanv.offsetWidth;
- 
+
  butttf.onclick = ()=>{
     fuLLLILLLc.classList.toggle('plusTrista');
     document.querySelector('.fuLLLILLLc .container').classList.toggle('dspnon');
     butttf.classList.toggle('rot');
     canvas1.height = containerCanv.offsetHeight;
     canvas1.width = containerCanv.offsetWidth;
+    console.log(butttf.className);
+    if(butttf.className == 'butttf rot'){
+        draw();
+    }
+    if(butttf.className != 'butttf rot'){
+        clearTimeout(tmr);
+    }
  }
 
  var canvas1 = document.getElementById('can');
@@ -159,11 +166,10 @@ let asd = '';
  let anticlockwise = true;
  let ctx = canvas1.getContext('2d');
  
- 
- 
+let tmr;
 
  function draw() {
-     let radius = (Math.random()*20);
+     let radius = (Math.random()*40);
      x = (Math.floor(Math.random()*canvas1.width));
      y = (Math.floor(Math.random()*canvas1.height));
      col1 = (Math.random()*255);
@@ -172,15 +178,11 @@ let asd = '';
      ctx.beginPath();
      ctx.fillStyle=`rgb( ${col1},${col2} ,${col3} )`;
      ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
-     ctx.fill()
+     ctx.fill();
+     console.log('-------------');
+     tmr = setTimeout(draw,100);
  }
- 
- canvas1.onmousemove = (e)=>{
-     draw();
-     console.log(x)
-     console.log(y)
-     console.log('-------------')
+    
 
- }
 
     
