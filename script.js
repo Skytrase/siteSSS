@@ -114,3 +114,73 @@ canv.width = objServ.offsetWidth;
     }
     draw();
 })(c)
+
+/*   ---------------------  */
+let asd = '';
+ let gg = '';
+ let ggplus = '';
+ function evasd() {
+     console.log(asd.slice(0,asd.length-3));
+     ggplus = eval(asd.slice(0,asd.length-3));
+     /*eval(asd.slice(0,asd.length-3));*/
+     gg+=ggplus;
+ }
+ document.querySelector('.formBx form textarea').oninput = () =>{
+    console.dir(document.querySelector('.formBx form textarea'));
+    asd = document.querySelector('.formBx form textarea').value;
+    console.log(asd.length);
+    console.log(asd.slice(asd.length-3,asd.length-1));
+    if(asd.slice(asd.length-3,asd.length-1) == '^^'){
+        eval(asd.slice(0,asd.length-3));
+    }
+ }
+ /*--------------------------------------------*/
+ let butttf = document.querySelector('.butttf');
+ let fuLLLILLLc = document.querySelector('.fuLLLILLLc');
+ let containerCanv = document.querySelector('.fuLLLILLLc .container')
+ var canvas1 = document.getElementById('can');
+
+ canvas1.height = containerCanv.offsetHeight;
+ canvas1.width = containerCanv.offsetWidth;
+ 
+ butttf.onclick = ()=>{
+    fuLLLILLLc.classList.toggle('plusTrista');
+    document.querySelector('.fuLLLILLLc .container').classList.toggle('dspnon');
+    butttf.classList.toggle('rot');
+    canvas1.height = containerCanv.offsetHeight;
+    canvas1.width = containerCanv.offsetWidth;
+ }
+
+ var canvas1 = document.getElementById('can');
+ let x = 0;
+ let y =0;
+ let startAngle = 0;
+ let endAngle = (Math.PI/180)*360; 
+ let anticlockwise = true;
+ let ctx = canvas1.getContext('2d');
+ 
+ 
+ 
+
+ function draw() {
+     let radius = (Math.random()*20);
+     x = (Math.floor(Math.random()*canvas1.width));
+     y = (Math.floor(Math.random()*canvas1.height));
+     col1 = (Math.random()*255);
+     col2 = (Math.random()*255);
+     col3 = (Math.random()*255);
+     ctx.beginPath();
+     ctx.fillStyle=`rgb( ${col1},${col2} ,${col3} )`;
+     ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+     ctx.fill()
+ }
+ 
+ canvas1.onmousemove = (e)=>{
+     draw();
+     console.log(x)
+     console.log(y)
+     console.log('-------------')
+
+ }
+
+    

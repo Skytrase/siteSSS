@@ -79,7 +79,25 @@ filter: blur(10px);
 .banner h2 span{
     font-weight: 700;
     font-size: 1.5em;
+    animation-duration: 3s;
+    animation-name: slidein;
+    position: relative;
+    transition: 1s;
 }
+@keyframes slidein{
+    0%{
+        color: rgb(41, 230, 255);
+        hue-rotate: 20deg;
+    }
+    50%{
+        hue-rotate: 360deg;
+        color: rgb(187, 255, 0);
+    }
+    100%{
+        color: rgb(255, 255, 255);
+    }
+}
+
 .banner h3{
     font-size: 1.5em;
     color: aliceblue;
@@ -238,6 +256,123 @@ color: #fff;
 .work .content .workBx img{
     max-width: 100%;
 }
+.fuLLLILLLc{
+    width: 100%;
+    height: 0px;
+    position: relative;
+    z-index: 3;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    overflow: hidden;
+}
+.fullll{
+    width: 100%;
+    height: 3px;
+    position: relative;
+    background: #000;
+}
+.butttf{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient( #00aeff , #00ffd5);
+    border-radius: 50%;
+    z-index: 40;
+    left: 10%;
+    top: -20px;
+    border: 2px solid black;
+    animation: kribut 1s linear infinite;
+    transition: 0.2s;
+}
+.rot{
+    left: 90%;
+    background: linear-gradient( #b3ff00 , #c8ff00);
+}
+@keyframes kribut{
+    0%{
+        border: 2px solid black;
+        filter: hue-rotate(-10deg);
+        box-shadow: 1px -1px 1px 1px #010005;
+    }
+    25%{
+        box-shadow: -1px -1px 1px 1px #1100ad;
+    }
+    50%{
+        border: 1px solid black;
+        filter: hue-rotate(50deg);
+        box-shadow: -1px 1px 1px 1px #110070;
+    }
+    75%{
+        box-shadow: 1px 1px 1px 1px #1100ad;
+    }
+    100%{
+        border: 2px solid black;
+        filter: hue-rotate(-10deg);
+        box-shadow: 1px -1px 1px 1px #000000;
+    }
+}
+.plusTrista{
+    height: 350px;
+}
+.dspnon{
+    display: none;
+}
+#can{
+    position: relative;
+    filter: hue-rotate(0deg);
+}
+.reww{
+    animation: trre 5s linear infinite;
+}
+@keyframes trre{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+    100%{
+        filter: hue-rotate(0deg);
+    }
+}
+.fuLLLILLLc .container{
+    height: 350px;
+    width: 100%;
+    z-index: 4;
+    display:flex;
+    justify-content:center;
+}
+.butttf:hover{
+    animation: ret 1s linear infinite;
+    transition: 1s;
+}
+@keyframes ret{
+    0%{
+        border: 3px solid black;
+        border-top: 15px solid rgb(0, 0, 0);
+        filter: hue-rotate(0deg)
+    }
+    25%{
+        border: 3px solid black;
+        border-right: 15px solid rgb(1, 0, 2);
+    }
+    50%{
+        border: 3px solid black;
+        border-bottom: 15px solid rgb(13, 0, 58);
+        filter: hue-rotate(360deg)
+    }
+    75%{
+        border: 3px solid black;
+        border-left: 15px solid rgb(2, 0, 37);
+    }
+    100%{
+        border: 3px solid black;
+        border-top: 15px solid black;
+    }
+}
 .textimonial{
     background-color: rgba(120, 130, 133, 0.438);
     
@@ -296,7 +431,8 @@ color: #fff;
     border: none;
     outline: none;
     background: #222;
-    color: #fff;
+    color: rgb(0, 255, 85);
+    text-shadow: 0px 0px 1px rgb(0, 250, 250);
     resize: none;
 }
 .formBx form textarea{
@@ -441,6 +577,7 @@ color: #fff;
 .btn.onc{
     border: 1px solid rgb(0, 174, 255);
 }
+
 /* responsive */
 @media (max-width: 991px){
     header,
