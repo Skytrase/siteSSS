@@ -169,18 +169,23 @@ let asd = '';
 let tmr;
 
  function draw() {
-     let radius = (Math.random()*40);
+     let radius = (Math.random()*30);
      x = (Math.floor(Math.random()*canvas1.width));
      y = (Math.floor(Math.random()*canvas1.height));
-     col1 = (Math.random()*255);
-     col2 = (Math.random()*255);
-     col3 = (Math.random()*255);
+     col1 = (0+(Math.random()*100));
+    col2 = (149+(Math.random()*50));
+    col3 = (190+(Math.random()*64));
+    col4 = (Math.floor(3+Math.random()*7));
+    let lingrad = ctx.createLinearGradient(0, 0, canvas1.width, canvas1.height);
      ctx.beginPath();
-     ctx.fillStyle=`rgb( ${col1},${col2} ,${col3} )`;
+     lingrad.addColorStop(0, `rgba(${col1}, ${col3}, ${col2}, 0.${col4})`);
+     lingrad.addColorStop(1, '#00a2ff');
+     ctx.fillStyle = lingrad;
      ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
      ctx.fill();
      console.log('-------------');
-     tmr = setTimeout(draw,100);
+     tmr = setTimeout(draw,150);
+     ctx.stroke()
  }
     
 
